@@ -1,0 +1,20 @@
+.notifications-page { max-width: 600px; margin: 0 auto; }
+.notifications-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border);
+}
+.notifications-header h2 { margin: 0; color: var(--text-primary); font-size: 1.2rem; }
+.mark-read-btn {
+  background: none; border: none; color: var(--accent); font-size: 0.85rem;
+  font-weight: 600; cursor: pointer;
+}
+.notifications-list {
+  background: var(--bg-primary); border-radius: 16px;
+  border: 1px solid var(--border); overflow: hidden;
+}
+.empty-notifications { text-align: center; padding: 3rem; color: var(--text-secondary); }
+.load-more-btn {
+  width: 100%; padding: 0.75rem; background: none; border: none;
+  border-top: 1px solid var(--border); color: var(--accent);
+  font-weight: 600; font-size: 0.85rem; cursor: pointer;
+}

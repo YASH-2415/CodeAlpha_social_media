@@ -1,0 +1,59 @@
+.home-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.feed-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  background: var(--bg-primary);
+  border-radius: 12px;
+  padding: 0.35rem;
+  border: 1px solid var(--border);
+}
+
+.feed-tab {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 9px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.feed-tab:hover {
+  background: var(--bg-secondary);
+}
+
+.feed-tab.active {
+  background: var(--accent);
+  color: white;
+}
+
+.posts-feed {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-feed {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: var(--bg-primary);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+.empty-feed h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.empty-feed p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}

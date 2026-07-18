@@ -1,0 +1,91 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  bottom: 0;
+  width: 220px;
+  background: var(--bg-primary);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 800;
+  overflow-y: auto;
+}
+
+.sidebar-logo {
+  padding: 0 0.75rem 1.5rem;
+}
+
+.sidebar-logo .logo-text {
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar-link:hover {
+  background: var(--bg-secondary);
+  transform: translateX(4px);
+}
+
+.sidebar-link.active {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+}
+
+.sidebar-link.active:hover {
+  background: var(--accent-hover, #4f46e5);
+  transform: none;
+}
+
+.sidebar-link svg {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.sidebar-link.create-btn {
+  margin-top: auto;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-weight: 600;
+}
+
+.sidebar-link.create-btn:hover {
+  transform: none;
+  opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}

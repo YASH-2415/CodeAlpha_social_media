@@ -1,0 +1,114 @@
+.create-post {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.create-post-image {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  min-height: 200px;
+}
+
+.create-post-image img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+}
+
+.remove-image {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.remove-image:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.2s;
+  min-height: 200px;
+}
+
+.upload-placeholder:hover {
+  background: var(--bg-tertiary, rgba(0,0,0,0.03));
+}
+
+.upload-placeholder p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0 0.25rem;
+}
+
+.upload-placeholder span {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.create-post textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  resize: none;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.create-post textarea:focus {
+  border-color: var(--accent);
+}
+
+.char-count {
+  text-align: right;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.create-post-btn {
+  padding: 0.75rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.create-post-btn:hover:not(:disabled) {
+  background: var(--accent-hover, #4f46e5);
+  transform: translateY(-1px);
+}
+
+.create-post-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
