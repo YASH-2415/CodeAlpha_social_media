@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/javascript-node:1-1
+    volumes:
+      - ..:/workspace:cached
+    working_dir: /workspace
+    ports:
+      - 5173:5173
+      - 5000:5000
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+      DB_NAME: alpha-social
+      CLIENT_URL: http://localhost:5173
+      PORT: 5000
+      NODE_ENV: development
+    command: sleep infinity
+  mongo:
+    image: mongo:7.0
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-data:/data/db
+volumes:
+  mongo-data:

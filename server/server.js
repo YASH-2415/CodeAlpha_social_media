@@ -30,6 +30,10 @@ app.use(cors({
     if (process.env.NODE_ENV !== 'production') {
       return callback(null, true);
     }
+    // Allow GitHub Codespaces forwarded origins
+    if (origin.endsWith('.app.github.dev')) {
+      return callback(null, true);
+    }
     // In production, only allow the configured client URL
     const allowed = process.env.CLIENT_URL || 'http://localhost:5173';
     if (origin === allowed) return callback(null, true);
